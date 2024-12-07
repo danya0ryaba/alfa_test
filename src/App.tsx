@@ -15,23 +15,14 @@ function App() {
   }, [])
 
   return (
-
-
     <div className="container">
       <Routes>
-
         <Route path='/' element={<Home />} />
         <Route path='/products/:id' element={<Card />} />
         <Route path='/create-product' element={<CreateProduct />} />
         <Route path='*' element={<Error />} />
-
       </Routes>
     </div>
-
-
-
-
-
   );
 }
 
