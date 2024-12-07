@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import { Button } from './Button'
 import { selectUsers, useUsersStore } from '../store/store'
 import { useNavigate } from 'react-router-dom'
-import { CreateUser } from '../types/types'
 
 
 export const Form: React.FC = () => {
@@ -17,21 +16,25 @@ export const Form: React.FC = () => {
         handleSubmit,
         formState: { errors, isValid },
         reset,
-    } = useForm({ mode: 'onBlur' });
+    } = useForm({ mode: 'onSubmit' });
 
-    const onSubmit = (data: CreateUser) => {
-        const user = {
-            id,
-            email: data.email,
-            first_name: data.name,
-            last_name: data.family,
-            avatar: `https://placehold.jp/260x180.png`,
-            isLike: false,
-            isFavorite: false
+    const onSubmit = (data: any) => {
+        try {
+            const user = {
+                id,
+                email: data.email,
+                first_name: data.name,
+                last_name: data.family,
+                avatar: `https://placehold.jp/260x180.png`,
+                isLike: false,
+                isFavorite: false
+            };
+            addUser(user);
+            reset();
+            backMainPage('/');
+        } catch (error) {
+            console.error('Ошибка при добавлении пользователя:', error);
         }
-        addUser(user)
-        reset();
-        backMainPage('/');
     }
     return (<>
         <form onSubmit={handleSubmit(onSubmit)}>

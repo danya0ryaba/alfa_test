@@ -15,9 +15,3 @@ export interface UserInfo {
         url: string
     }
 }
-
-export interface CreateUser {
-    email: string,
-    family: string,
-    name: string
-}
