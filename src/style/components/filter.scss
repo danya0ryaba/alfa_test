@@ -1,0 +1,38 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    li {
+
+        button {
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 18px;
+            background-color: #caa9f5;
+            transition: all 0.3s ease-in-out;
+            color: #e5f8ff;
+            font-size: 26px;
+            letter-spacing: 0.3rem;
+
+            &:hover {
+                transform: scale(1.1);
+                color: #8456c1;
+                background-color: #dbebff;
+            }
+
+        }
+
+        button[disabled] {
+            cursor: not-allowed;
+            background-color: rgb(55, 85, 150);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+    }
+
+}

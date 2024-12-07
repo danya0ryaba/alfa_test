@@ -1,0 +1,39 @@
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #08181e;
+    padding: 30px;
+    border-radius: 20px;
+    min-height: 600px;
+
+    h3 {
+        margin-top: 25px;
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1.5rem;
+    }
+
+    .wrapper_input {
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            input {
+                padding: 6px 12px;
+                border-radius: 20px;
+            }
+
+        }
+    }
+
+}

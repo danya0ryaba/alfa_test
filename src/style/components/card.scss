@@ -1,0 +1,49 @@
+.user_info {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    &-image {
+        width: 400px;
+        height: 280px;
+        margin-right: 24px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_text {
+        max-width: 400px;
+
+        &-title {
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        &-family {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        &-email {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 22px;
+            margin: 14px 0;
+        }
+
+        &-url {
+            font-weight: 500;
+        }
+
+    }
+}

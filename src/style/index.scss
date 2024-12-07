@@ -1,0 +1,17 @@
+@use './font.scss';
+@use './reset.scss';
+@use './components/all.scss';
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 50px 20px 60px 20px;
+    margin: 0 auto;
+}
+
+.users {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
